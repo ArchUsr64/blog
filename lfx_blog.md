@@ -85,3 +85,16 @@ support in my current patch revision but I'm sure with the help of maintainers, 
 be able to refine the implemenatation and get the driver merged upstream.
 
 [MCP48xx](https://github.com/ArchUsr64/blog/assets/83179501/0bc1104f-0485-4a56-b4fb-8aee6d82273d)
+
+## Closing Thoughts
+
+My journey throughout the program has been full of learning and growth. Looking back,
+it has been an amazing development to go from a complete stranger to the mailing list
+way of software engineering to contributing drivers to the Linux Kernel.
+
+The mentorship proved to be an indispensable catalyst in kick-starting my path towards
+Kernel development. I thank my mentors and fellow mentees for joining me along the journey,
+your support and enthusiasm were critical in making this a success.
+
+I look forwards to being an active member of the kernel community, armed with the
+knowledge acquired through the last three months and contributing my fullest.
