@@ -55,7 +55,6 @@ keyboard or mouse are reported to the kernel.
 [Adafruit Mini i2c gamepad](https://github.com/ArchUsr64/blog/assets/83179501/223a0af8-771a-4c17-a00f-ffefa85d1d03)
 
 ## Into the Depths
-
 Continuing the journey, I decided to work on some sensors that lacked linux support.
 The idea of working on these smaller devices really intrigued me. I was interested to
 learn how these devices were exposed to the userspace and the common abstraction for
@@ -69,3 +68,20 @@ linux kernel and used it to abstract the underlying i2c communication.
 The mystery universal abstraction used by all sensors turned out to be [IIO channels](https://docs.kernel.org/driver-api/iio/core.html#iio-device-channels).
 <!-- TODO: Add more here?? -->
 [LTR390](https://github.com/ArchUsr64/blog/assets/83179501/e9e66398-60de-42c7-b511-a66a8c5927f2)
+
+### Building a DAC driver
+
+Till now all my drivers had been relegated to input devices. I was curious to explore
+the challenges allociated with getting some data from the userspace to an output device.
+I decided to start with a simple DACs(Digital to Analog Converters) for the challenge.
+Seeking to learn the APIs for SPI(Serial Peripheral Interface) communication protocol, I
+chose the MCP4821 as the device, which supported SPI.
+
+The interface for receiving the user input turned out to be the same, IIO Channels and
+the SPI APIs turned out to be very similar to their i2c counterparts. Being done with the
+driver earlier than expected, I challenged myself to add support for all remaining five
+similar DACs from the same faimily (MC4801,02,11,12 and 22). I have achieved a redumentry
+support in my current patch revision but I'm sure with the help of maintainers, I would
+be able to refine the implemenatation and get the driver merged upstream.
+
+[MCP48xx](https://github.com/ArchUsr64/blog/assets/83179501/0bc1104f-0485-4a56-b4fb-8aee6d82273d)
