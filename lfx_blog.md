@@ -29,3 +29,28 @@ I was expecting. This experience taught me what working on the kernel
 was all about. The goal is to provide best possible experience to the users and
 patches fixing minor formatting issues don't do that.
 
+<!-- TBH I was afraid I wouldn't be accepted -->
+On 30th August, I got my confirmation of being selected into the program.
+
+## Getting Started
+Having had a longtime fascination with firmware and drivers, I was intrigued
+to see that some of the source files in the `drivers` directory had a similar structure
+to the hello world module. Each had `module_init`, `module_exit`, `MODULE_*` macros,
+after doing some digging, I learned that drivers are just kernel modules that provide
+a common API to the underlying hardware.
+
+This realization gave me the confidence to start exploring how device drivers
+function and if I could implement one myself. I had a i2c gamepad with me from one
+of my previous projects. So I decided to try my hands on writing a driver for it
+since it didn't have any.
+
+I based my [initial patch](https://lore.kernel.org/linux-input/20231007144052.1535417-2-anshulusr@gmail.com/)
+on pre-existing driver for a similar gamepad from SparkFun. The subsequent code reviews
+from the subsystem maintainers helped in improving the functionality and ironing out
+some of the implementation quirks. The exercise helped me understand the use of the
+devicetree bindings and the process of writing and testing them. I also gained
+experience working with the Input APIs and learned how the events from devices like
+keyboard or mouse are reported to the kernel.
+
+[Adafruit Mini i2c gamepad](https://github.com/ArchUsr64/blog/assets/83179501/223a0af8-771a-4c17-a00f-ffefa85d1d03)
+
