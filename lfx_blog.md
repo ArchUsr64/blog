@@ -13,7 +13,7 @@ From the official [website](https://wiki.linuxfoundation.org/lkmp):
 ### Application Process
 The learning journey started right as I applied for the program through [LFX](https://mentorship.lfx.linuxfoundation.org/#projects_all).
 I was assigned a few tasks to complete as a precondition for the mentorship as well
-as the requirement to complete LFD103 ([A Beginner’s Guide to Linux Kernel Development](https://training.linuxfoundation.org/training/a-beginners-guide-to-linux-kernel-development-lfd103/)) course.
+as the requirement to complete the LFD103 ([A Beginner’s Guide to Linux Kernel Development](https://training.linuxfoundation.org/training/a-beginners-guide-to-linux-kernel-development-lfd103/)) course.
 Completing the prerequisite tasks served as a gentle introduction to the upcoming
 program. Tasks ranged from detecting PCI and USB devices on the device using sysfs to
 compiling and booting your own kernel!
@@ -35,7 +35,7 @@ On 30th August, I got my confirmation of being selected for the program.
 ## Getting Started
 Having had a longtime fascination with firmware and drivers, I was intrigued
 to see that some of the source files in the `drivers` directory had a similar structure
-to the Hello World module. Each had `module_init`, `module_exit`, `MODULE_*` macros,
+to the Hello World module. Each had `module_init`, `module_exit` and the `MODULE_*` macros,
 after doing some digging, I learned that drivers are just kernel modules that provide
 a common API to the underlying hardware.
 
@@ -80,7 +80,7 @@ chose the MCP4821 as the device, which supported SPI.
 The interface for receiving the user input turned out to be the same, IIO Channels and
 the SPI APIs turned out to be very similar to their i2c counterparts. Being done with the
 driver earlier than expected, I challenged myself to add support for all remaining five
-similar DACs from the same family `(MC4801,02,11,12 and 22)`. I have achieved a rudimentary
+similar DACs from the same family `(MC4801,02,11,12 and 22)`. I have achieved rudimentary
 support in my current patch revision but I'm sure with the help of maintainers, I would
 be able to refine the implementation and get the driver merged upstream.
 
@@ -92,7 +92,7 @@ My journey throughout the program has been full of learning and growth. Looking 
 it has been an amazing development to go from a stranger to the mailing list
 way of software engineering to contribute drivers to the Linux Kernel.
 
-The mentorship proved to be an indispensable catalyst in kick-starting my path towards
+The mentorship proved to be an indispensable catalyst in kick-starting my path toward
 Kernel development. I thank my mentors and fellow mentees for joining me along the journey,
 your support and enthusiasm were critical in making this a success.
 
