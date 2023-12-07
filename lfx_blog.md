@@ -54,3 +54,18 @@ keyboard or mouse are reported to the kernel.
 
 [Adafruit Mini i2c gamepad](https://github.com/ArchUsr64/blog/assets/83179501/223a0af8-771a-4c17-a00f-ffefa85d1d03)
 
+## Into the Depths
+
+Continuing the journey, I decided to work on some sensors that lacked linux support.
+The idea of working on these smaller devices really intrigued me. I was interested to
+learn how these devices were exposed to the userspace and the common abstraction for
+the diverse array of sensors worked.
+
+I chose a Lite-On LTR390 UV/Ambient Light Sensor as my device of choice since it used
+i2c which I had gotten comfortable with while working on my gamepad driver. The device
+also had an exhaustive documentation. I learned of the `regmap` abstraction in the
+linux kernel and used it to abstract the underlying i2c communication.
+
+The mystery universal abstraction used by all sensors turned out to be [IIO channels](https://docs.kernel.org/driver-api/iio/core.html#iio-device-channels).
+<!-- TODO: Add more here?? -->
+[LTR390](https://github.com/ArchUsr64/blog/assets/83179501/e9e66398-60de-42c7-b511-a66a8c5927f2)
